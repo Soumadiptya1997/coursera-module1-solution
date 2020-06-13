@@ -1,2 +1,2 @@
-# coursera-module1-solution
-coursera module 1 solution
+# Coursera-Module1-Solution
+Solution for **Lunch Checker** assignment of *Week 1* 
