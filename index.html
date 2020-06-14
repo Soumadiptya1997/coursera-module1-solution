@@ -6,7 +6,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- Angular JS -->
+    <script src="angular.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -23,19 +26,19 @@
     </style>
 </head>
 
-<body>
-    <div class="container">
+<body ng-app="LunchCheck">
+    <div class="container" ng-controller="LunchCheckController">
         <h1>Lunch Checker</h1>
 
         <div class="form-group">
-            <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
-                class="form-control">
+            <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control" ng-model="items">
         </div>
         <div class="form-group">
-            <button class="btn btn-default">Check If Too Much</button>
+            <button class="btn btn-primary" ng-click="check()">Check If Too Much</button>
         </div>
         <div class="form-group message">
             <!-- Your message can go here. -->
+            {{message}}
         </div>
     </div>
 
