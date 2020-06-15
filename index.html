@@ -30,8 +30,11 @@
     <div class="container" ng-controller="LunchCheckController">
         <h1>Lunch Checker</h1>
 
-        <div class="form-group">
-            <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control" ng-model="items">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
+                    class="form-control" ng-model="items">
+            </div>
         </div>
         <div class="form-group">
             <button class="btn btn-primary" ng-click="check()">Check If Too Much</button>
